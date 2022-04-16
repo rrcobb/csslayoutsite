@@ -1,22 +1,22 @@
-This is the source for "learnlayout.com":http://learnlayout.com in case you're curious how it was built.
+# Learn CSS Layout
 
-h2. How to Build
+Adapted from [learnlayout.com](http://learnlayout.com) ([github](https://github.com/incompl/csslayoutsite)).
 
-* If needed, install "NPM":https://npmjs.org/
-** Last tested version was 6.14.4
-* If needed, install "grunt":http://gruntjs.com @npm install -g grunt-cli@
-** Last tested grunt-cli version was 1.3.2
-** Last tested grunt version was 0.4.5
-* If needed, do a @npm install@
-* If needed, install jekyll @sudo gem install jekyll@
-** Last tested version was 4.1.1
-* If needed, install "pygments":http://pygments.org/download/
-** I have used `sudo easy_install pygments` on Mac
-** Last tested version was 2.7.2
-* Build + run test server with @grunt serve@
-* or build only with @grunt@
+## Changes from the original
 
-h2. How to Translate
+TODO:
+- home / toc nav
+- toc fix
+- remove google analytics tracking
+- remove social / replace with link back to original
+- stick the bottom of the page to the bottom
+- update notes since HTML5 is no longer new
+
+## Local setup
+
+Requires `jekyll`
+
+## How to Translate
 
 Translation files live in the "translations":https://github.com/incompl/csslayoutsite/tree/master/translations directory. Each file is a "2-letter ISO 639-1 language code":http://www.loc.gov/standards/iso639-2/php/code_list.php and the YAML file extention.
 
@@ -26,6 +26,8 @@ To contribute to a translation, start with "en.yaml":https://github.com/incompl/
 
 To test a translation, change the @lang@ property in "_config.yml":https://github.com/incompl/csslayoutsite/blob/master/templates/_config.yml before you build. If you choose an RTL language you need to add the line @rtl: true@ to the config.
 
-h2. License
+## License
 
 "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)":https://creativecommons.org/licenses/by-nc/4.0/
+
+

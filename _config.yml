@@ -1,0 +1,7 @@
+source: "templates"
+destination: "_site"
+lang: "en"
+
+options:
+  pygments: true
+  plugins: "_plugins"

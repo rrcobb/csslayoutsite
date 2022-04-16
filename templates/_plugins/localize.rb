@@ -15,26 +15,16 @@ module Jekyll
         @defaults = YAML::load(File.open(defaultsPath))
       end
       @init = true
-
-      if @key[0..3] == 'page'
-        tokens = @key.split('.')
-        @key = context.environments.first
-        while tokens.length > 0
-          token = tokens.shift
-          @key = @key[token]
-        end
-      end
-
-      # hacky fix for liquid caching issue
-      # see https://github.com/incompl/csslayoutsite/issues/155)
-      if @key.include?(".title") && !@key.include?("global")
-        @key = context.registers[:page]["title"]
-      end
-
+      
       result = @translations[@key]
 
       if result.nil? and defined? @defaults
         result = @defaults[@key]
+      end
+
+      if result.nil? and @key.include?("page.title")
+        key = context.registers[:page]["title"]
+        result = @translations[key]
       end
 
       "#{result}"
